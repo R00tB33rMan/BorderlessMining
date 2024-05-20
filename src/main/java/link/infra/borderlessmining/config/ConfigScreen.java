@@ -58,8 +58,8 @@ public abstract class ConfigScreen extends Screen {
 			return 400;
 		}
 
-		protected int getScrollbarPositionX() {
-			return super.getScrollbarPositionX() + 32;
+		protected int getScrollbarX() {
+			return super.getScrollbarX() + 32;
 		}
 
 		public Style getHoveredStyle(int mouseX, int mouseY) {
@@ -121,7 +121,7 @@ public abstract class ConfigScreen extends Screen {
 
 	@Override
 	public void renderBackground(DrawContext context, int mouseX, int mouseY, float delta) {
-		this.renderBackgroundTexture(context);
+		this.renderBackgroundTexture(context, Screen.MENU_BACKGROUND_TEXTURE, 0, 0, 0.0F, 0.0F, this.width, this.height);
 	}
 
 	public abstract void addElements();
